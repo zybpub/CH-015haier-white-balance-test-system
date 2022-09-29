@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{17B7A446-81C7-4970-B5AE-E5A62C9FC5A8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Test_Automation</RootNamespace>
+    <AssemblyName>海尔白平衡调试3.0.0.10</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\海尔白平衡调试\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>t.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Test_Automation.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HslCommunication, Version=5.7.4.0, Culture=neutral, PublicKeyToken=cdb2261fa039ed67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\HslCommunication.dll</HintPath>
+    </Reference>
+    <Reference Include="IrisSkin4, Version=2006.3.22.45, Culture=neutral, PublicKeyToken=127be25a6db25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IrisSkin4.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Form_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\Form_admin.Designer.cs">
+      <DependentUpon>Form_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nathan_Classes\Serial_Class.cs" />
+    <Compile Include="Nathan_Classes\class_Haier_wb_data.cs" />
+    <Compile Include="Nathan_Classes\CMD.cs" />
+    <Compile Include="Nathan_Classes\config_json.cs" />
+    <Compile Include="Setup\Form_colortemp_set.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\Form_colortemp_set.Designer.cs">
+      <DependentUpon>Form_colortemp_set.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_password_change.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_password_change.Designer.cs">
+      <DependentUpon>Form_password_change.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_password_change_technician.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_password_change_technician.Designer.cs">
+      <DependentUpon>Form_password_change_technician.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_SoftRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_SoftRegister.Designer.cs">
+      <DependentUpon>Form_SoftRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_tongji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_tongji.designer.cs">
+      <DependentUpon>Form_tongji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_UserLoginLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_UserLoginLog.Designer.cs">
+      <DependentUpon>Form_UserLoginLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="helper\DES.cs" />
+    <Compile Include="Test\Form_IR_test_study.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\Form_IR_test_study.Designer.cs">
+      <DependentUpon>Form_IR_test_study.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Form_IR_test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\Form_IR_test.Designer.cs">
+      <DependentUpon>Form_IR_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Mysql_wb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Mysql_wb.Designer.cs">
+      <DependentUpon>Form_Mysql_wb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Form_PLC_Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\Form_PLC_Test.designer.cs">
+      <DependentUpon>Form_PLC_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Form_TV_Communication_Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\Form_TV_Communication_Test.Designer.cs">
+      <DependentUpon>Form_TV_Communication_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main.Designer.cs">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="helper\INIHelper.cs" />
+    <Compile Include="helper\LogHelper.cs" />
+    <Compile Include="helper\stringhandle.cs" />
+    <Compile Include="Nathan_Classes\Mysql_Class.cs" />
+    <Compile Include="Nathan_Classes\Class_DES.cs" />
+    <Compile Include="Nathan_Classes\Class_Error_Code.cs" />
+    <Compile Include="Nathan_Classes\Class_Mysql.cs" />
+    <Compile Include="Nathan_Classes\Class_PLC.cs" />
+    <Compile Include="Nathan_Classes\Class_RightsManage.cs" />
+    <Compile Include="Nathan_Classes\Class_Serial.cs" />
+    <Compile Include="Nathan_Classes\Class_SoftRegister.cs" />
+    <Compile Include="Nathan_Classes\Class_StringHandle.cs" />
+    <Compile Include="Nathan_Classes\Class_User.cs" />
+    <Compile Include="Nathan_Classes\UserHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Nathan_Classes\SendDataToMes.cs" />
+    <Compile Include="Setup\Form_Setup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\Form_Setup.Designer.cs">
+      <DependentUpon>Form_Setup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Form_Setup_CA410.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\Form_Setup_CA410.Designer.cs">
+      <DependentUpon>Form_Setup_CA410.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Form_Setup_Mysql.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\Form_Setup_Mysql.Designer.cs">
+      <DependentUpon>Form_Setup_Mysql.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Form_Setup_PLC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\Form_Setup_PLC.Designer.cs">
+      <DependentUpon>Form_Setup_PLC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Form_Setup_System.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\Form_Setup_System.Designer.cs">
+      <DependentUpon>Form_Setup_System.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Form_Setup_TV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\Form_Setup_TV.Designer.cs">
+      <DependentUpon>Form_Setup_TV.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Form_admin.resx">
+      <DependentUpon>Form_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\Form_colortemp_set.resx">
+      <DependentUpon>Form_colortemp_set.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Form_IR_test_study.resx">
+      <DependentUpon>Form_IR_test_study.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Form_IR_test.resx">
+      <DependentUpon>Form_IR_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Mysql_wb.resx">
+      <DependentUpon>Form_Mysql_wb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_password_change.resx">
+      <DependentUpon>Form_password_change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_password_change_technician.resx">
+      <DependentUpon>Form_password_change_technician.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Form_PLC_Test.resx">
+      <DependentUpon>Form_PLC_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_SoftRegister.resx">
+      <DependentUpon>Form_SoftRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_tongji.resx">
+      <DependentUpon>Form_tongji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Form_TV_Communication_Test.resx">
+      <DependentUpon>Form_TV_Communication_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_UserLoginLog.resx">
+      <DependentUpon>Form_UserLoginLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main.resx">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Setup\Form_Setup.resx">
+      <DependentUpon>Form_Setup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\Form_Setup_CA410.resx">
+      <DependentUpon>Form_Setup_CA410.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\Form_Setup_Mysql.resx">
+      <DependentUpon>Form_Setup_Mysql.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\Form_Setup_PLC.resx">
+      <DependentUpon>Form_Setup_PLC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\Form_Setup_System.resx">
+      <DependentUpon>Form_Setup_System.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\Form_Setup_TV.resx">
+      <DependentUpon>Form_Setup_TV.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="error_code.txt" />
+    <Content Include="helper\TextFile1.txt" />
+    <Content Include="mysql\haier.txt" />
+    <Content Include="mysql\user.txt" />
+    <Content Include="mysql\haier_wb_data.txt" />
+    <Content Include="t.ico" />
+    <Content Include="更新日志.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

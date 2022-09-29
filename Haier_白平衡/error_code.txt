@@ -1,0 +1,4 @@
+﻿	//HC4-BPHTS-001   与TV通讯失败
+   	//HC4-BPHTS-002   调试超时
+            //HC4-BPHTS-003   调试失败
+            //HC4-BPHTS-004   电视不出图

@@ -1,0 +1,30 @@
+﻿https://www.cnblogs.com/dathlin/p/7885368.html
+
+private void userButton30_Click(object sender, EventArgs e)
+{
+    // 读取操作
+    bool coil100 = busTcpClient.ReadCoil("100").Content;   // 读取线圈100的通断
+    short short100 = busTcpClient.ReadInt16("100").Content; // 读取寄存器100的short值
+    ushort ushort100 = busTcpClient.ReadUInt16("100").Content; // 读取寄存器100的ushort值
+    int int100 = busTcpClient.ReadInt32("100").Content;      // 读取寄存器100-101的int值
+    uint uint100 = busTcpClient.ReadUInt32("100").Content;   // 读取寄存器100-101的uint值
+    float float100 = busTcpClient.ReadFloat("100").Content; // 读取寄存器100-101的float值
+    long long100 = busTcpClient.ReadInt64("100").Content;    // 读取寄存器100-103的long值
+    ulong ulong100 = busTcpClient.ReadUInt64("100").Content; // 读取寄存器100-103的ulong值
+    double double100 = busTcpClient.ReadDouble("100").Content; // 读取寄存器100-103的double值
+    string str100 = busTcpClient.ReadString("100", 5).Content;// 读取100到104共10个字符的字符串
+ 
+    // 写入操作
+    busTcpClient.WriteCoil("100", true);// 写入线圈100为通
+    busTcpClient.Write("100", (short)12345);// 写入寄存器100为12345
+    busTcpClient.Write("100", (ushort)45678);// 写入寄存器100为45678
+    busTcpClient.Write("100", 123456789);// 写入寄存器100-101为123456789
+    busTcpClient.Write("100", (uint)123456778);// 写入寄存器100-101为123456778
+    busTcpClient.Write("100", 123.456);// 写入寄存器100-101为123.456
+    busTcpClient.Write("100", 12312312312414L);//写入寄存器100-103为一个大数据
+    busTcpClient.Write("100", 12634534534543656UL);// 写入寄存器100-103为一个大数据
+    busTcpClient.Write("100", 123.456d);// 写入寄存器100-103为一个双精度的数据
+    busTcpClient.Write("100", "K123456789");
+     
+}
+ 

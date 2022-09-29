@@ -1,0 +1,12 @@
+git config --global user.email "1315005302@qq.com"
+git config --global user.name "nathan"
+
+git tag v1.2
+git push --tags
+
+重设git远程帐号及密码：
+
+
+git config --system --unset credential.helper
+
+error: could not lock config file C:/Program Files/Git/mingw64/etc/gitconfig: Permission denied
