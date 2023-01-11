@@ -1,1 +1,5 @@
 https://gitee.com/zybpub_suresh166/haier-white-balance-test-system.git
+
+
+public
+https://github.com/zybpub/CH-015haier-white-balance-test-system.git
